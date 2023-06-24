@@ -1,0 +1,17 @@
+{
+  "name": "GDSTx",
+  "version": "1.0.0",
+  "keywords": "EVE2, EVE3, EVE4",
+  "description": "Library to control EVE2, EVE3 and EVE4 screens on the Arduino IDE with teensy 4x/STM32F1-F2-F4-F7",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RudolphRiedel/GDSTx.git"
+  },
+  "authors": [
+    {
+      "name": "FT81xMania",
+      "maintainer": true
+    }
+  ],
+  "license": "BSD-3-Clause license"
+}
