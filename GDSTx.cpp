@@ -669,7 +669,7 @@ void GDClass::begin(int cs) {
  #if defined(ARDUINO_TEENSY32)
    //SD.begin(SD_CONFIG);
  #else    
-	SD.begin(SdioConfig(FIFO_SDIO));
+    //SD.begin(SdioConfig(FIFO_SDIO)); // without SD card this results in a 3s delay
  #endif
 #endif
   
@@ -1128,7 +1128,8 @@ if (SizeEVE==5)
   Clear(); swap();
   Clear(); swap();
   Clear(); swap();
-  cmd_regwrite(REG_PWM_DUTY, 128);
+//  cmd_regwrite(REG_PWM_DUTY, 128);
+  cmd_regwrite(REG_PWM_DUTY, 0x66);
   flush();
 
 //#if (EVETFTonTeensyX==1)

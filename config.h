@@ -7,7 +7,7 @@
 
     #define CS                 10   // general
     #define SetSPISpeed 10000000   // general
-    #define NHDTouch    1   // 1 cargar rutinas panel táctil    0 NHD normal aparentemente no lo requiere?¿
+    #define NHDTouch    0   // 1 cargar rutinas panel táctil    0 NHD normal aparentemente no lo requiere?¿
     #define GameduinoX  0   // 1 gameduinox shield instalado  0 otros como NHD43 o FT843
 #endif
 
