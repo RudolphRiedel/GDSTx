@@ -51,10 +51,10 @@
 
 #include "config.h"
 
-#define JPGsizeX   					 0        //under test
-#define JPGsizeY   					 0        //under test
-#define  H743    					 0        //under test
-#define POR_PIN  					 0        //under test 
+#define JPGsizeX    0   //under test
+#define JPGsizeY    0   //under test
+#define  H743       0   //under test
+//#define POR_PIN     0   //under test 
 
 #ifdef TEENSYDUINO
 
@@ -64,20 +64,20 @@
  //#define POR_PIN                  33   //No conectar
 #endif
 
-	#if (SizeEVE==54)
-		#define POR_PIN             24	  // 03 Junio 2022 THX hermano!. Funciona para teensy 3.6 XD XD   también funciona en teensy 4.1 XD XD   Reset-PD Pin
-	#endif
+#if (SizeEVE==54)
+#define POR_PIN     9   // 03 Junio 2022 THX hermano!. Funciona para teensy 3.6 XD XD   también funciona en teensy 4.1 XD XD   Reset-PD Pin
+#endif
  
- 	#if (SizeEVE==431)
-		#define SetSPISpeed   36000000    // reducir al valor si la pantalla no enciende o es inestable con gráficos lineales contínuos y/o reproducción de videos
-		#define POR_PIN             24	  //06 Junio 2023 Reset-PD Pin
-	#endif
- 
-	#if (SizeEVE==52)
-		#define SetSPISpeed   32000000    // reducir al valor óptimo= 32000000, 36000000 es inestable con gráficos lineales contínuos y reproducción de videos
-		#define POR_PIN             24	  // 03 Junio 2022 THX hermano!. Funciona para teensy 3.6 XD XD   también funciona en teensy 4.1 XD XD   Reset-PD Pin
-	#endif
- 
+#if (SizeEVE==431)
+#define SetSPISpeed   36000000    // reducir al valor si la pantalla no enciende o es inestable con gráficos lineales contínuos y/o reproducción de videos
+#define POR_PIN             24	  //06 Junio 2023 Reset-PD Pin
+#endif
+
+#if (SizeEVE==52)
+#define SetSPISpeed   32000000    // reducir al valor óptimo= 32000000, 36000000 es inestable con gráficos lineales contínuos y reproducción de videos
+#define POR_PIN             24	  // 03 Junio 2022 THX hermano!. Funciona para teensy 3.6 XD XD   también funciona en teensy 4.1 XD XD   Reset-PD Pin
+#endif
+
 #endif
 
 #if defined(ARDUINO_ARCH_STM32)     //*******************************************************STM32 boards setup: EEPROM source, CS-TFT, MCU, SD_PIN, SDSpeed
@@ -206,7 +206,7 @@
 #endif
 
 #if (SizeEVE==54)
- #define SetSPISpeed   		  36000000     //32    36
+ #define SetSPISpeed  36000000     //32    36
 
   #if(STM32_CPU == 4073)
     #define POR_PIN                PE1	  //Si funciona XD XD F407VG

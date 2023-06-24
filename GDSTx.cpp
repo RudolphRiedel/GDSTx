@@ -815,7 +815,7 @@ if (SizeEVE==54){
 	GD.wr32(REG_SWIZZLE,   0);          //0 1  3                                     0        
 	GD.wr32(REG_PCLK_POL,  1);         //1, 0    0 to off vertical lines on horizontal gradients    1
 	GD.wr32(REG_CSPREAD,   0);          //0                                                          0                 
-	GD.wr32(REG_DITHER,    1);           //1, 0                                                       1
+	GD.wr32(REG_DITHER,    0);           //1, 0                                                       1
 	GD.wr32(REG_PCLK_FREQ, 0xD14);    //0                                      0xD14
 		
 	//GD.wr32(REG_OUTBITS, 0xfff);      //0x360  0xff0                               
